@@ -1,0 +1,51 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+
+<html>
+
+<head>
+
+<title>Demo of Strikethrough JavaScript string object</title>
+
+<script type="text/javascript">
+
+function my_fun(j){
+
+var chkbox ="ckb" + j;
+
+var my_span ="my_span" + j;
+
+var msg = chkbox + "  " + my_span;
+
+if(document.getElementById(chkbox).checked){ 
+
+document.getElementById(my_span).style.textDecoration='line-through';
+
+}else{
+
+document.getElementById(my_span).style.textDecoration='none';
+
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+
+
+<form name=form1 method=post action=check.php>
+
+<input type=checkbox  id=ckb1 value=1 onclick=my_fun(1);><span id='my_span1'>This is job number 1</span>  <br>
+
+<input type=checkbox  id=ckb2 value=2 onclick=my_fun(2);><span id='my_span2'>This is job number 2</span>  <br>
+
+<input type=checkbox  id=ckb3 value=3 onclick=my_fun(3);><span id='my_span3'>This is job number 3</span>  <br>
+
+</form>
+
+</body>
+
+</html>

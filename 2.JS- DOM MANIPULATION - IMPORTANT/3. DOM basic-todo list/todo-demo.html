@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        li{
+           font-size: 20px;
+           padding: 20px;
+        }
+
+/**
+ * Change bullet color of list item by replacing it with CSS
+ */
+
+ ul li {
+  color: #3c3c3c; 
+  /* set color of list item text */
+  list-style: none; 
+}
+ ul li::before {
+  color: #006b6e;  
+  /* color of bullet or square */
+  content: "\2022"; 
+  /* Unicode of character to precede the list item */
+  font-size: 2em; 
+  /* em or %*/ 
+  padding-right: 1.1225em; 
+  /* use em*/
+  position: relative;
+  top: 0em; 
+  /* use em or % */
+}
+
+        
+        .done{
+            text-decoration: line-through;
+        }
+        </style>
+    <title>Todo demo Hove</title>
+</head>
+<body>
+    <h1>OUR TODO HOVER EXAMPLE</h1>
+    <ul>
+        <li><input type="checkbox" id="ckb1" onclick=my_fun(1);><span id="chck1">Hi</span></li>
+        <li><input type="checkbox" id="ckb2" onclick=my_fun(2);><span id="chck2">Hello</span></li>
+        <li><input type="checkbox" id="ckb3" onclick=my_fun(3);><span id="chck3">How are you</span></li>
+    </ul>
+<script src="todo-demo.js"></script>
+    
+    
+</body>
+</html>
